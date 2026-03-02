@@ -1,0 +1,37 @@
+﻿@model Exam
+<h2 style="margin-top:40px">Edit Exam</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Exam Date</label>
+        <input asp-for="ExamDate" type="datetime-local" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Duration (minutes)</label>
+        <input asp-for="Duration" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Active</label>
+        <input asp-for="IsActive" type="checkbox" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Update Exam
+    </button>
+
+</form>

@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
+build_property.RootNamespace = Online_Exam_system
+build_property.RootNamespace = Online_Exam_system
+build_property.ProjectDir = C:\Users\DELL\Desktop\exam\Online_Exam_system\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\exam\Online_Exam_system
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/AdminDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxBZGRRdWVzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/AttemptExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxBdHRlbXB0RXhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/AvailableExams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxBdmFpbGFibGVFeGFtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/EditQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxFZGl0UXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/ExamResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxFeGFtUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Exam/ViewQuestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxWaWV3UXVlc3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/login/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/login/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/login/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/login/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/MyResults/MyResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlSZXN1bHRzXE15UmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Result/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/StudentDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/exam/Online_Exam_system/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8mm493e8eu

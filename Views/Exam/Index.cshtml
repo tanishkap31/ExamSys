@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Exam>
+
+
+<h2 style="margin-top:40px">All Exams</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">
+    Create New Exam
+</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Exam Date</th>
+            <th>Duration</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var exam in Model)
+        {
+            <tr>
+                <td>@exam.Title</td>
+                <td>@exam.ExamDate</td>
+                <td>@exam.Duration minutes</td>
+                <td>
+                    @(exam.IsActive ? "Active" : "Inactive")
+                </td>
+                <td>
+                    <a asp-action="AddQuestion"
+                       asp-route-examId="@exam.Id"
+                       class="btn btn-success btn-sm">
+                        Add Question
+                    </a>
+                    <a asp-action="ViewQuestions"
+                       asp-route-examId="@exam.Id"
+                       class="btn btn-info btn-sm">
+                        View Questions
+                    </a>
+                    <a asp-action="Edit"
+                       asp-route-id="@exam.Id"
+                       class="btn btn-warning btn-sm">
+                        Edit Exam
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

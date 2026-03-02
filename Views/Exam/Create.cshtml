@@ -1,0 +1,29 @@
+﻿@model Exam
+
+<h2 style="margin-top:40px">Create Exam</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Description</label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Exam Date</label>
+        <input asp-for="ExamDate" type="datetime-local" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Duration (Minutes)</label>
+        <input asp-for="Duration" type="number" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Exam</button>
+
+</form>

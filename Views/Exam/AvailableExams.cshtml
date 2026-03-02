@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Exam>
+@{
+    var attemptedExamIds = ViewBag.AttemptedExamIds as List<int>;
+}
+<h2 style="margin-top:40px">Available Exams</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+@*         @foreach (var exam in Model)
+        {
+            <tr>
+                <td>@exam.Title</td>
+                <td>@exam.ExamDate</td>
+                <td>@exam.Duration minutes</td>
+                <td>
+                    <a asp-action="AttemptExam"
+                       asp-route-examId="@exam.Id"
+                       class="btn btn-primary btn-sm">
+                        Attempt
+                    </a>
+                </td>
+            </tr>
+        } *@
+        @foreach (var exam in Model)
+        {
+            bool alreadyAttempted = attemptedExamIds.Contains(exam.Id);
+
+            <tr>
+                <td>@exam.Title</td>
+                <td>@exam.ExamDate.ToShortDateString()</td>
+                <td>@exam.Duration minutes</td>
+                <td>
+                    @if (alreadyAttempted)
+                    {
+                        <button class="btn btn-secondary btn-sm" disabled>
+                            Already Attempted
+                        </button>
+                    }
+                    else
+                    {
+                        <a asp-action="AttemptExam"
+                           asp-route-examId="@exam.Id"
+                           class="btn btn-primary btn-sm">
+                            Attempt
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,73 @@
+﻿@model List<Question>
+@{
+    int duration = ViewBag.Duration; // minutes
+}
+<h2 style="margin-top:40px">Attempt Exam</h2>
+
+<div class="alert alert-danger text-center">
+    Time Remaining: <span id="timer"></span>
+</div>
+
+<form asp-action="SubmitExam" method="post">
+
+    <input type="hidden" name="examId" value="@ViewBag.ExamId" />
+
+    @{
+        int qNo = 1;
+    }
+
+    @foreach (var q in Model)
+    {
+        <div class="mb-4">
+            <h5>Q@(qNo). @q.QuestionText</h5>
+
+            <input type="hidden" name="questionIds" value="@q.Id" />
+
+            <div>
+                <input type="radio" name="answers[@q.Id]" value="A" /> @q.OptionA <br />
+                <input type="radio" name="answers[@q.Id]" value="B" /> @q.OptionB <br />
+                <input type="radio" name="answers[@q.Id]" value="C" /> @q.OptionC <br />
+                <input type="radio" name="answers[@q.Id]" value="D" /> @q.OptionD
+            </div>
+        </div>
+
+        qNo++;
+    }
+
+    <button type="submit" id="submitBtn" class="btn btn-success">
+        Submit Exam
+    </button>
+
+</form>
+
+<script>
+    var durationMinutes = @duration;
+    var totalSeconds = durationMinutes * 60;
+
+    var timerElement = document.getElementById("timer");
+    var submitButton = document.getElementById("submitBtn");
+
+    var countdown = setInterval(function () {
+
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+
+        timerElement.innerHTML =
+            minutes + "m " + (seconds < 10 ? "0" : "") + seconds + "s";
+
+        if (totalSeconds <= 0) {
+            clearInterval(countdown);
+
+            timerElement.innerHTML = "Time is up!";
+
+            // Disable submit button
+            submitButton.disabled = true;
+
+            // Optional: Auto submit form
+            document.getElementById("examForm").submit();
+        }
+
+        totalSeconds--;
+
+    }, 1000);
+</script>

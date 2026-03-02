@@ -1,0 +1,116 @@
+﻿@using Online_Exam_system.ViewModels
+@model RegisterViewModel
+
+@{
+    //ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+@if (TempData["Error"] != null)
+{
+    <script>
+        alert("@TempData["Error"]");
+    </script>
+}
+
+@if (TempData["Success"] != null)
+{
+    <script>
+        alert("@TempData["Success"]");
+    </script>
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExamSys - Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Left Background -->
+        <div class="auth-left">
+            <div class="auth-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>ExamSys</h1>
+                <p>Join thousands of students</p>
+            </div>
+            <div class="auth-features">
+                <div class="feature-item">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Free to Join</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Instant Access</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Features</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="auth-right">
+            <div class="auth-form">
+                <div class="form-header">
+                    <h2 id="registerTitle">Create Student Account</h2>
+                    <p id="registerSubtitle">Join as a student</p>
+                </div>
+
+
+                <form id="registerForm"
+                      class="auth-form-group"
+                      method="post"
+                      asp-controller="Register"
+                      asp-action="Register">
+
+                    <div class="input-group">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" name="Name" placeholder="Full Name" required>
+                    </div>
+
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" name="Email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" name="Password" placeholder="Password (min 8)" required>
+
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to Terms & Conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        <span id="registerBtnText">Create Student Account</span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    @*     <script src="../js/auth.js"></script> *@
+</body>
+</html>

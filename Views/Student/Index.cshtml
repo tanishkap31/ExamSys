@@ -1,0 +1,32 @@
+﻿@model IEnumerable<User>
+
+<div class="container-fluid" style="margin-top:40px">
+
+    <h2>Student List</h2>
+
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Registered Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.CreatedAt</td>
+                    <td>
+                        <span class="badge bg-success">Active</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

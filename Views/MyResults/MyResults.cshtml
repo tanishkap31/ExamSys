@@ -1,0 +1,41 @@
+﻿@using Online_Exam_system.ViewModels
+@model List<ResultViewModel>
+
+<h2 class="mb-4" style="margin-top:40px">My Results</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Exam</th>
+            <th>Obtained Marks</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+           @*  <th>Date</th> *@
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            foreach (var result in Model)
+            {
+                <tr>
+                    <td>@result.ExamTitle</td>
+                    <td>@result.ObtainedMarks</td>
+                    <td>@result.TotalMarks</td>
+                    <td>
+                        @result.Percentage.ToString("0.00") %
+                    </td>
+                   @*  <td>@result.ExamDate.ToShortDateString()</td> *@
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center text-danger">
+                    No Results Found
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

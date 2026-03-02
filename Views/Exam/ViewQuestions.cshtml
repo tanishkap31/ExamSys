@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Question>
+
+<h2 style="margin-top:40px">Questions List</h2>
+
+@* <a asp-action="AddQuestion"
+   asp-route-examId="@ViewBag.ExamId"
+   class="btn btn-primary mb-3">
+    Add New Question
+</a> *@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Correct Option</th>
+            <th>Marks</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var q in Model)
+        {
+            <tr>
+                <td>@q.QuestionText</td>
+                <td>@q.CorrectOption</td>
+                <td>@q.Marks</td>
+                <td>
+                    <a asp-action="EditQuestion"
+                       asp-route-id="@q.Id"
+                       class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,85 @@
+﻿@using Online_Exam_system.ViewModels
+@model AdminDashboardViewModel
+<div class="container-fluid" style="margin-top:40px">
+
+    <div class="mb-4">
+        <h2>Admin Dashboard</h2>
+        <p class="text-muted">Manage exams, questions and students.</p>
+    </div>
+
+    <div class="row mb-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Exams</h6>
+                    <h3 class="text-primary">@Model.TotalExams</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Questions</h6>
+                    <h3 class="text-success">@Model.TotalQuestions</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Active Exams</h6>
+                    <h3 class="text-warning">@Model.ActiveExams</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Students</h6>
+                    <h3 class="text-danger">@Model.TotalStudents</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Recent Exams</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Date</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var exam in Model.RecentExams)
+                    {
+                        <tr>
+                            <td>@exam.Title</td>
+                            <td>@exam.ExamDate</td>
+                            <td>@exam.Duration minutes</td>
+                            <td>
+                                @(exam.IsActive ? "Active" : "Inactive")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

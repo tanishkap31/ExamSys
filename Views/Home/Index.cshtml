@@ -1,0 +1,142 @@
+﻿@using Online_Exam_system.ViewModels
+@model StudentDashboardViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid" style="margin-top:40px">
+
+    <!-- Welcome Section -->
+    <div class="mb-4">
+        <h2>Dashboard</h2>
+        <p class="text-muted">Here’s your exam overview and performance summary.</p>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Exams</h6>
+                    <h3 class="text-primary">@Model.TotalExams</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Attempted Exams</h6>
+                    <h3 class="text-success">@Model.AttemptedExams</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Pending Exams</h6>
+                    <h3 class="text-warning">@Model.PendingExams</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="text-muted">Average Score</h6>
+                    <h3 class="text-danger">@Model.AverageScore.ToString("0.00")%</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Recent Exams Table -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Recent Exam Attempts</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Date</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.RecentExams.Count > 0)
+                    {
+                        foreach (var exam in Model.RecentExams)
+                        {
+                            <tr>
+                                <td>@exam.ExamName</td>
+                                <td>@exam.Date.ToShortDateString()</td>
+                                <td>@exam.Percentage.ToString("0.00")%</td>
+                                <td>
+                                    @if (exam.Percentage >= 50)
+                                    {
+                                        <span class="badge bg-success">Passed</span>
+                                    }
+                                    else if (exam.Percentage >= 40)
+                                    {
+                                        <span class="badge bg-warning text-dark">Average</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Failed</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-danger">
+                                No exam attempts yet
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Upcoming Exams -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Upcoming Exams</h5>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                @if (Model.UpcomingExams.Count > 0)
+                {
+                    foreach (var exam in Model.UpcomingExams)
+                    {
+                        <li class="list-group-item">
+                            <strong>@exam.ExamName</strong>
+                            <span class="float-end text-muted">
+                                @exam.ExamDate.ToShortDateString()
+                            </span>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li class="list-group-item text-center text-muted">
+                        No upcoming exams
+                    </li>
+                }
+            </ul>
+            </ul>
+        </div>
+    </div>
+
+</div>
